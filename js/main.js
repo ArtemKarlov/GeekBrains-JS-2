@@ -14,9 +14,9 @@ const renderProduct = (obj) => {
             </div>`
 };
 const renderPage = (list = products) => {
-    const productsList = (list.map(item => renderProduct(item))).join('\n');
+    const productsList = (list.map(item => renderProduct(item))).join('\n'); //превращаем массив в строку с разделителем - перенос строки
     console.log(productsList);
     document.querySelector('.products').innerHTML = productsList;
 };
 
-renderPage();
+renderPage(); // используется значение параметра по умолчанию
